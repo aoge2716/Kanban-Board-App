@@ -4,11 +4,12 @@ import Footer from "./Footer.jsx"
 
 export default function Home(){
     return(
-        <>
-        <h1>HOME PAGE</h1>
+        <div id="home">
+        
         <Sidebar/>
         <Navbar/>
+        <h1>HOME PAGE</h1>
         <Footer/>
-        </>
+        </div>
     )
 }
