@@ -23,6 +23,7 @@ a:hover {
 }
 
 body {
+  font-size: 1.5vh;
   margin: 0;
   display: flex;
   place-items: center;
@@ -55,18 +56,39 @@ button:focus-visible {
 }
 
 #home{
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+#topnav {
+  position: fixed;
+  top: 0vh;
   width: 100vw;
+  height: 10vh;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#topnav img{
+  width: 6vw;
+  height: auto;
 }
 
-/* #sidebar{
-  width: 30vw;
-  height: 100vh;
-  border: 3px solid white;
-} */
+#sidebar{
+  position: fixed;
+  top: 10vh;
+  left: 0vw;
+  width: 20vw;
+  height: 90vh;
+  border: 1px solid white;
+} 
+#sidebar li {
+  list-style: none;
+  left: 0vw
+}
 
 @media (prefers-color-scheme: light) {
   :root {
