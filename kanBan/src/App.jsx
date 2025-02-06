@@ -1,12 +1,20 @@
-import Home from "./component/Home.jsx"
+import Home from "./component/Home.jsx";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
     <>
-      <Home/>
+      {/* ...  */}
+
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+
+      </Routes>
+
+      {/* ...  */}
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

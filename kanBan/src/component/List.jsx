@@ -40,7 +40,7 @@ export default function List(props){
             
     )
 
-
+}
     // return (
     //     <ul>
     //         {tasksToDisplay.map(element => {
@@ -63,4 +63,3 @@ export default function List(props){
     //         })}
     //     </ul>
     // )
-}
