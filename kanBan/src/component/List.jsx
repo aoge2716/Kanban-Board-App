@@ -2,8 +2,8 @@ import tasksArr from "../assets/json/ItemsList.json"
 import ListItem from "./ListItem";
 import { useState } from "react"
 import "./List.css"
-export default function List(props){
 
+export default function List(props){
     const[tasksToDisplay, setTasksToDisplay] = useState(tasksArr);
 
     const clicked = (taskId)=>{
@@ -12,8 +12,6 @@ export default function List(props){
         })
         setTasksToDisplay(newTasks);
     }
-    
-
     return (
         <div className="tasks">
             {tasksToDisplay.map(element => {
