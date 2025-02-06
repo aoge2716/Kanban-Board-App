@@ -1,7 +1,8 @@
 .tasks{
+    margin-top: 10vh;
     width:40vw;
     border: 3px solid gold;
-    
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
