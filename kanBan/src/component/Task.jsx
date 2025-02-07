@@ -1,6 +1,7 @@
 import "./Task.css"
 import { Link } from "react-router-dom";
 
+
 export default function Task(props){
     
     return (
@@ -8,10 +9,9 @@ export default function Task(props){
             <h1>Home Page</h1>
             {props.taskArr.map(element => {
                 return(
+                    
                     <div className="task" key={element.id}>
-                        
                             <ul>
-                                {/* <TaskDetail List= {element}/> */}
                                 <li>title:{element.title}</li>
                                 <li>assignee: {element.assignee}</li>
                                 <li>created date: {element.createdDate}</li>
