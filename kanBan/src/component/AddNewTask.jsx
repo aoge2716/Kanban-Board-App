@@ -6,14 +6,14 @@ export default function AddNewTask({ setNewTask }) {
   const [assignee, setAssignee] = useState("");
   const [status, setStatus] = useState("");
   const [priority, setPriority] = useState(false);
-  const [createdDate, setCreatedDate] = useState(Date.now());
+  const [createdDate, setCreatedDate] = useState("");
   const [dueDate, setDueDate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newTask = {
-      id: Date.now(),
+      id: Date.now().toString(),
       title,
       description,
       assignee,
@@ -29,7 +29,7 @@ export default function AddNewTask({ setNewTask }) {
     setAssignee("");
     setStatus("");
     setPriority(false);
-    setCreatedDate(Date.now());
+    setCreatedDate("");
     setDueDate("");
   };
 
@@ -82,7 +82,7 @@ export default function AddNewTask({ setNewTask }) {
       <label>
         Date of creation:
         <input
-          type="number"
+          type="text"
           value={createdDate}
           onChange={(e) => setCreatedDate(e.target.value)}
           placeholder="enter the date of creation"
@@ -91,7 +91,7 @@ export default function AddNewTask({ setNewTask }) {
       <label>
         Deadline:
         <input
-          type="number"
+          type="text"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
           placeholder="enter the due date"
