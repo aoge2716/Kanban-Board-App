@@ -4,7 +4,7 @@
       "title": "Design Landing Page",
       "description": "Create a visually appealing landing page for the website.",
       "assignee": "Mary Davis",
-      "status": "To Do",
+      "status": "Not Assigned",
       "priority": "High",
       "createdDate": "2023-09-15",
       "dueDate": "2023-09-30"
@@ -34,7 +34,7 @@
       "title": "Release Version 1.0",
       "description": "Prepare for the release of the first version of the application.",
       "assignee": "Sarah Brown",
-      "status": "To Do",
+      "status": "Not Assigned",
       "priority": "High",
       "createdDate": "2023-09-18",
       "dueDate": "2023-10-05"
@@ -44,7 +44,7 @@
       "title": "Update Documentation",
       "description": "Update user documentation with the latest features and changes.",
       "assignee": "David Wilson",
-      "status": "Done",
+      "status": "Completed",
       "priority": "Low",
       "createdDate": "2023-09-19",
       "dueDate": "2023-09-30"

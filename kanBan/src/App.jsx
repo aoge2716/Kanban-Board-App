@@ -3,11 +3,13 @@ import Navbar from "./component/Navbar.jsx";
 import Footer from "./component/Footer.jsx";
 import Task from "./component/Task.jsx";
 import TaskDetail from "./component/TaskDetail.jsx";
-import ErrorPage from "./component/ErrorPage.jsx";
-import AboutPage from "./component/AboutPage.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import tasksArr from "./assets/json/ItemsList.json"
-import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   const [tasksToDisplay, setTasksToDisplay] = useState(tasksArr);

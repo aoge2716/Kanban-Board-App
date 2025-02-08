@@ -1,100 +1,138 @@
 import { useState } from "react";
 
 export default function AddNewTask({ setNewTask }) {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [assignee, setAssignee] = useState("");
-  const [status, setStatus] = useState("");
-  const [priority, setPriority] = useState(false);
-  const [createdDate, setCreatedDate] = useState("");
-  const [dueDate, setDueDate] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [formData,setFormData] = useState({
+    title: "",
+    description:"",
+    assignee:"",
+    status: false,
+    priority:"",
+    createdDate:"",
+    dueDate:"",
+  })
+
+  const handleChange =(event)=>{
+    const {value, name, type, checked} = event.target;
+    
+    setFormData(val =>({
+      ...val,
+      [name]: type === "checkbox"? checked: value
+    }));
+  }
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const newTask = {
       id: Date.now().toString(),
-      title,
-      description,
-      assignee,
-      status,
-      priority,
-      createdDate,
-      dueDate,
+      ...formData
     };
 
-    setNewTask((prevTasks) => [...prevTasks, newTask]);
-    setTitle("");
-    setDescription("");
-    setAssignee("");
-    setStatus("");
-    setPriority(false);
-    setCreatedDate("");
-    setDueDate("");
+    setNewTask((prevTasks) => [newTask, ...prevTasks]);
+    
+    setFormData({
+      title: "",
+      description:"",
+      assignee:"",
+      status: false,
+      priority:"",
+      createdDate:"",
+      dueDate:"",
+    })
+
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form id="form" onSubmit={handleSubmit}>
       <label>
         Title:
         <input
+          name="title"
           type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={formData.title}
+          onChange={handleChange}
           placeholder="enter the title"
+          required
         />
       </label>
+
       <label>
         Description:
         <input
+          name="description"
           type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          value={formData.description}
+          onChange={handleChange}
           placeholder="enter the description"
+          required
         />
       </label>
+
       <label>
         Assignee:
         <input
+          name="assignee"
           type="text"
-          value={assignee}
-          onChange={(e) => setAssignee(e.target.value)}
+          value={formData.assignee}
+          onChange={handleChange}
           placeholder="enter the assignee"
+          required
         />
       </label>
+
       <label>
         Status:
-        <input
-          type="text"
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
-          placeholder="enter the status"
-        />
+        <select 
+          name="status"
+          value={formData.status} 
+          onChange={handleChange} 
+          required
+        >
+          <option value="">Select Status</option>
+          <option value="Not Assigned">Not Assigned</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
       </label>
+
       <label>
-        Is this task high priority:
-        <input
-          type="checkbox"
-          checked={priority}
-          onChange={(e) => setPriority(e.target.checked)}
-        />
+        Priority:
+        <select 
+          name="priority" 
+          value={formData.priority} 
+          onChange={handleChange}
+          required
+        >
+          <option value="">Select Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
       </label>
+
       <label>
         Date of creation:
         <input
-          type="text"
-          value={createdDate}
-          onChange={(e) => setCreatedDate(e.target.value)}
+          name="createdDate"
+          type="date"
+          value={formData.createdDate}
+          onChange={handleChange}
           placeholder="enter the date of creation"
+          required
         />
       </label>
+
       <label>
         Deadline:
         <input
-          type="text"
-          value={dueDate}
-          onChange={(e) => setDueDate(e.target.value)}
+          name="dueDate"
+          type="date"
+          value={formData.dueDate}
+          onChange={handleChange}
           placeholder="enter the due date"
+          required
         />
       </label>
 
