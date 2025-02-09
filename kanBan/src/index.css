@@ -59,7 +59,41 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+h1, h2, p {
+  color: #1E1E1E; 
+}
 
+ul {
+  color: #EAEAEA;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background: #232931;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+
+button {
+  background: #ffc107;
+  border: 2px solid #232931;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #ffb300;
+}
 
 
 

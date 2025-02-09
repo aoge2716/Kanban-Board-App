@@ -1,17 +1,26 @@
 #addForm{
     /* background-color: green; */
     /* border: 3px solid red; */
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    background-color: #232931;
+    border-radius: 30px;
+    padding: 20px 0;
 }
+
+#addForm h2{
+    color: #FFC107;
+}
+
 #addForm label{
     display: flex;
+    justify-content: space-around;
     /* border: 3px solid green; */
     width:100%;
     max-width: 100%;
-    justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
 }
@@ -26,4 +35,8 @@
     border-radius: 0.25rem;
     margin-bottom: 0.5rem;
     margin-left: -0.1rem;
+}
+
+#addForm button{
+    max-width: 30%;
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import AboutPage from "../pages/AboutPage.jsx"
+import AboutPage from "../pages/About.jsx"
 import "./Sidebar.css"
 
 export default function Sidebar(props) {
@@ -11,7 +11,7 @@ export default function Sidebar(props) {
           <h2>Home</h2>
         </Link>
 
-        <Link to="/AboutPage" activeClassName="active">
+        <Link to="/About">
           <h2>About</h2>
         </Link>
         <button onClick={props.toggleSidebar}>CLOSE</button>

@@ -55,6 +55,7 @@ export default function AddNewTask({ setNewTask }) {
 
   return (
     <form id="addForm" onSubmit={handleSubmit}>
+      <h2>Add New Task</h2>
       <label>
         Title:
         <input

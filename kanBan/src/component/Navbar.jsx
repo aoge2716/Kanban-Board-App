@@ -1,4 +1,6 @@
+import {Link} from "react-router-dom";
 import "./Navbar.css"
+
 export default function Navbar(props) {
     return (
     
@@ -8,7 +10,11 @@ export default function Navbar(props) {
         </button>
         
         <h1>Kanbanana</h1>
-        <img id="logo" src="./src/assets/image/logo/app_logo.png" alt="logo of the website"/>
+        
+        <Link to="/">
+          <img id="logo" src="./src/assets/image/logo/app_logo.png" alt="logo of the website"/>
+        </Link>
+        
       </div>
     );
   }

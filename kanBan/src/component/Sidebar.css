@@ -4,7 +4,7 @@
     left: 0;
     width: 0;
     height: 100vh;
-    background-color: coral;
+    background-color: #F5E6C4;
     overflow-x: hidden;
     padding-top: 1rem;
 
@@ -22,4 +22,8 @@
 #sidebar li {
 list-style: none;
 left: 0;
+}
+
+#sidebar h2, button{
+    color: black;
 }

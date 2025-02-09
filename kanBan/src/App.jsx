@@ -4,7 +4,7 @@ import Footer from "./component/Footer.jsx";
 import Task from "./component/Task.jsx";
 import TaskDetail from "./component/TaskDetail.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-import AboutPage from "./pages/AboutPage.jsx";
+import About from "./pages/About.jsx";
 
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -35,17 +35,17 @@ function App() {
         <Navbar toggleSidebar={toggleSidebar}/>
         <div id="main-content" className="center-content">
           <Routes>
-          <Route path="/" element={<Task 
-            taskArr={tasksToDisplay} 
-            callbackRemoveTask={removeTask} 
-            setNewTask={setTasksToDisplay} 
-            />}
-          />
-          <Route path="/tasks/:taskId" element={<TaskDetail taskArr={tasksToDisplay} />} />
-          <Route path="*" element={<ErrorPage />} />
-          <Route path="/AboutPage" element={<AboutPage />} />
-        </Routes>
-        <Footer />
+            <Route path="/" element={<Task 
+              taskArr={tasksToDisplay} 
+              callbackRemoveTask={removeTask} 
+              setNewTask={setTasksToDisplay} 
+              />}
+            />
+            <Route path="/tasks/:taskId" element={<TaskDetail taskArr={tasksToDisplay} />} />
+            <Route path="*" element={<ErrorPage />} />
+            <Route path="/About" element={<About />} />
+          </Routes>
+          <Footer />
         </div>
       </div>
      
