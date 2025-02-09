@@ -1,15 +1,19 @@
 import Sidebar from "./component/SideBar.jsx";
 import Navbar from "./component/Navbar.jsx";
 import Footer from "./component/Footer.jsx";
-import Task from "./component/Task.jsx";
-import TaskDetail from "./component/TaskDetail.jsx";
+import Home from "./component/Home.jsx";
+import TaskDetail from "./pages/TaskDetail.jsx";
+
 import ErrorPage from "./pages/ErrorPage.jsx";
-import About from "./pages/About.jsx";
+import AboutPage from "./pages/About.jsx";
+import AddNewTaskPage from "./pages/AddNewTaskPage.jsx";
+import ShowTasks from "./component/ShowTask.jsx";
 
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import tasksArr from "./assets/json/ItemsList.json"
 import "./App.css"
+
 
 
 function App() {
@@ -31,11 +35,10 @@ function App() {
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       <div id="main-section">
-        
         <Navbar toggleSidebar={toggleSidebar}/>
         <div id="main-content" className="center-content">
           <Routes>
-            <Route path="/" element={<Task 
+            <Route path="/" element={<Home 
               taskArr={tasksToDisplay} 
               callbackRemoveTask={removeTask} 
               setNewTask={setTasksToDisplay} 
@@ -43,10 +46,13 @@ function App() {
             />
             <Route path="/tasks/:taskId" element={<TaskDetail taskArr={tasksToDisplay} />} />
             <Route path="*" element={<ErrorPage />} />
-            <Route path="/About" element={<About />} />
+            <Route path="/About" element={<AboutPage />} />
+            <Route path="/AddNewTask" element={<AddNewTaskPage setNewTask={setTasksToDisplay} />} />
+            <Route path="/CurrentTasks" element={<ShowTasks taskArr={tasksToDisplay} callbackRemoveTask={removeTask} />} />
           </Routes>
-          <Footer />
         </div>
+
+        <Footer />
       </div>
      
       

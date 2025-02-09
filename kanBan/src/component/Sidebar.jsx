@@ -11,9 +11,19 @@ export default function Sidebar(props) {
           <h2>Home</h2>
         </Link>
 
+        <Link to="/AddNewTask">
+          <h2>Add New Task</h2>
+        </Link>
+
+        <Link to="/CurrentTasks">
+          <h2>Current Tasks</h2>
+        </Link>
+
         <Link to="/About">
           <h2>About</h2>
         </Link>
+
+        
         <button onClick={props.toggleSidebar}>CLOSE</button>
         
       </nav>

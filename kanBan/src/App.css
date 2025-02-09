@@ -1,6 +1,7 @@
 #app-container {
     display: flex;
     width: 100%;
+    min-height: 90vh;
     transition: all 0.3s ease-in-out;
     /* border: 20px solid green */
 }
@@ -21,11 +22,19 @@
     width: 100%;
     transition: margin-left 0.3s ease-in-out;
     background-color: #E1B12C;
-    /* border: 10px solid red; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 4px solid red; */
 }
 #main-content{
     padding-top: 10vh;
-    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    /* border: 4px solid red; */
     width:100%
 }
 .center-content{

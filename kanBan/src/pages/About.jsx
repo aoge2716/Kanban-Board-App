@@ -1,6 +1,6 @@
 import { Routes, Route, Link, NavLink } from "react-router-dom";import React from 'react';
 import "./About.css"
-export default function About() {
+export default function AboutPage() {
   return (
     <div id="about-page">
       <h1>About Kanbanana 🍌</h1>

@@ -95,6 +95,17 @@ button:hover {
   background: #ffb300;
 }
 
+.home{
+  /* margin-top: 10vh; */
+  /* border: 3px solid red; */
+  width:80%;    
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
 
 /* form span {
