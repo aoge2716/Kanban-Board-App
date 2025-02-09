@@ -1,0 +1,29 @@
+#addForm{
+    /* background-color: green; */
+    /* border: 3px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#addForm label{
+    display: flex;
+    /* border: 3px solid green; */
+    width:100%;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#addForm input, select, textarea{
+    /* width: 50%; */
+    max-width: 60%;
+    min-width: 50%;
+    min-height: 20px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    margin-left: -0.1rem;
+}

@@ -1,0 +1,25 @@
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: coral;
+    overflow-x: hidden;
+    padding-top: 1rem;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: width 0.3s ease-in-out;
+} 
+
+#sidebar.open{
+    width:20%;
+    transition: width 0.3s ease-in-out;
+}
+
+#sidebar li {
+list-style: none;
+left: 0;
+}

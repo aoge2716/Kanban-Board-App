@@ -4,7 +4,7 @@ import "./Task.css";
 
 export default function Task({ taskArr, callbackRemoveTask, setNewTask }) {
   return (
-    <div className="tasks">
+    <div id="tasks">
       <h1>Home Page</h1>
 
       <AddNewTask setNewTask={setNewTask} />

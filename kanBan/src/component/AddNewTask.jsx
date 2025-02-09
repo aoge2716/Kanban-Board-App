@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./AddNewTask.css"
 export default function AddNewTask({ setNewTask }) {
 
   const [formData,setFormData] = useState({
@@ -19,6 +19,15 @@ export default function AddNewTask({ setNewTask }) {
       ...val,
       [name]: type === "checkbox"? checked: value
     }));
+
+    // raise error for when due date is earlier than created date
+    if (name === "dueDate" && formData.createdDate){
+      if(value < formData.createdDate){
+        event.target.setCustomValidity("Due Date cannot be earlier than created Date");
+      } else{
+        event.target.setCustomValidity("");
+      }
+    }
   }
 
 
@@ -45,7 +54,7 @@ export default function AddNewTask({ setNewTask }) {
   };
 
   return (
-    <form id="form" onSubmit={handleSubmit}>
+    <form id="addForm" onSubmit={handleSubmit}>
       <label>
         Title:
         <input
@@ -60,9 +69,8 @@ export default function AddNewTask({ setNewTask }) {
 
       <label>
         Description:
-        <input
+        <textarea
           name="description"
-          type="text"
           value={formData.description}
           onChange={handleChange}
           placeholder="enter the description"
