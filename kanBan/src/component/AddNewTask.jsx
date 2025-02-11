@@ -20,9 +20,10 @@ export default function AddNewTask({ setNewTask }) {
       [name]: type === "checkbox"? checked: value
     }));
 
-    // raise error for when due date is earlier than created date
     if (name === "dueDate" && formData.createdDate){
-      if(value < formData.createdDate){
+      const createdDate = new Date(formData.createdDate);
+      const dueDate = new Date(value);
+      if(dueDate  < createdDate){
         event.target.setCustomValidity("Due Date cannot be earlier than created Date");
       } else{
         event.target.setCustomValidity("");
