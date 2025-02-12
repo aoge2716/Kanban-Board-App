@@ -1,3 +1,4 @@
+import "./TaskDetail.css";
 import { Link, useParams } from "react-router-dom";
 
 
@@ -9,24 +10,25 @@ export default function TaskDetail(props) {
   });
 
   let imgSrc, imgAlt;
+
   switch(task.status){
     case("Completed"):
-      imgSrc = "./src/assets/image/status/completed.gif";
+      imgSrc = "../src/assets/image/status/completed.gif";
       imgAlt = "Task Completed";
       break;
     case("In Progress"):
-      imgSrc = "./src/assets/image/status/in_progress.gif";
+      imgSrc = "../src/assets/image/status/in_progress.gif";
       imgAlt = "Task In Progress";
       break;
     case("Not Assigned"):
-      imgSrc = "./src/assets/image/status/not_assigned.gif";
+      imgSrc = "../src/assets/image/status/not_assigned.gif";
       imgAlt = "Task Not Assigned";
       break;
   }
    
-
+  
   return (
-    <div key={task.id} className="home" >
+    <div key={task.id} className="home" id="taskDetail">
       <h1>Task Detail Page</h1>
       <div className="task" style={{width:"60%"}}>
         <ul>
@@ -37,7 +39,8 @@ export default function TaskDetail(props) {
           <li>Created Date: {task.createdDate}</li>
           <li>Status: {task.status}</li>
           <img src={imgSrc} alt={imgAlt}/>
-          <br />
+          <br/>
+          <button >add 1</button>
           <Link to="/">
             <button>Back</button>
           </Link>

@@ -44,7 +44,7 @@ function App() {
               setNewTask={setTasksToDisplay} 
               />}
             />
-            <Route path="/tasks/:taskId" element={<TaskDetail taskArr={tasksToDisplay} />} />
+            <Route path="/tasks/:taskId" element={<TaskDetail taskArr={tasksToDisplay} setTask={setTasksToDisplay} />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/About" element={<AboutPage />} />
             <Route path="/AddNewTask" element={<AddNewTaskPage setNewTask={setTasksToDisplay} />} />
