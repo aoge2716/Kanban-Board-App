@@ -6,10 +6,9 @@ import ShowTasks from "./ShowTask.jsx";
 export default function Home({ taskArr, callbackRemoveTask, setNewTask }) {
   return (
     <div className="home">
-      <h1>Home Page</h1>
-      
+      <h3></h3>
       <AddNewTask setNewTask={setNewTask} />
-
+      <h3></h3>
       <ShowTasks taskArr={taskArr} callbackRemoveTask={callbackRemoveTask}/>
     </div>
   );
