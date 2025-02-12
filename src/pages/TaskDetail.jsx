@@ -20,7 +20,7 @@ export default function TaskDetail(props) {
       imgAlt = "Task In Progress";
       break;
     case("Not Assigned"):
-      imgSrc = "/public/image/status/not_assigned.gif";
+      imgSrc = "/image/status/not_assigned.gif";
       imgAlt = "Task Not Assigned";
       break;
   }
