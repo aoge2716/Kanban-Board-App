@@ -1,8 +1,9 @@
-import Sidebar from "./component/SideBar.jsx";
+
 import Navbar from "./component/Navbar.jsx";
 import Footer from "./component/Footer.jsx";
 import Home from "./component/Home.jsx";
 import EditTask from "./component/EditTask";
+import Sidebar from "./component/SideBar.jsx";
 
 
 import TaskDetail from "./pages/TaskDetail.jsx";
