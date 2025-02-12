@@ -12,15 +12,15 @@ export default function TaskDetail(props) {
 
   switch(task.status){
     case("Completed"):
-      imgSrc = "../../public/image/status/completed.gif";
+      imgSrc = "/image/status/completed.gif";
       imgAlt = "Task Completed";
       break;
     case("In Progress"):
-      imgSrc = "../../public/image/status/in_progress.gif";
+      imgSrc = "/image/status/in_progress.gif";
       imgAlt = "Task In Progress";
       break;
     case("Not Assigned"):
-      imgSrc = "../../public/image/status/not_assigned.gif";
+      imgSrc = "/public/image/status/not_assigned.gif";
       imgAlt = "Task Not Assigned";
       break;
   }
