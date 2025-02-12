@@ -53,7 +53,7 @@ function App() {
               element={<Home taskArr={tasksToDisplay} callbackRemoveTask={removeTask} setNewTask={setTasksToDisplay} />}
             />
             <Route path="/tasks/:taskId" element={<TaskDetail taskArr={tasksToDisplay} setTask={setTasksToDisplay} />} />
-            <Route path="*" element={<ErrorPage />} />
+            
             <Route path="/About" element={<AboutPage />} />
             <Route path="/AddNewTask" element={<AddNewTaskPage setNewTask={setTasksToDisplay} />} />
             <Route
@@ -64,6 +64,7 @@ function App() {
               path="/edit/:taskId"
               element={<EditTask taskArr={tasksToDisplay} updateTask={updateTask} />}
             />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
 
