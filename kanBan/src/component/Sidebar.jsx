@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
-import AboutPage from "../pages/About.jsx"
 import "./Sidebar.css"
 
 export default function Sidebar(props) {
