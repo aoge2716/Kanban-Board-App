@@ -14,3 +14,11 @@
     /* border: 3px solid green; */
     text-align: center;
 }
+.task button{
+    object-fit: contain;
+    margin: 10px
+}
+.task img{
+    width: 50%;
+    object-fit: contain;
+}

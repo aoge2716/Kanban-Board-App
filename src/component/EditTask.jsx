@@ -36,62 +36,63 @@ export default function EditTask(props) {
   };
 
   return (
-    <div>
-      <h1>Edit Task</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Title:</label>
+    <form class="formManipulate" onSubmit={handleSubmit} >
+      <h2>Edit Task</h2>
+      <label>Title:
         <input
           type="text"
           name="title"
           value={updatedTask.title}
           onChange={handleChange}
         />
-        <br />
+        </label>
 
-        <label>Description:</label>
+      <label>Description:
         <input
           type="text"
           name="description"
           value={updatedTask.description}
           onChange={handleChange}
         />
-        <br />
+      </label>
+      
 
-        <label>Assignee:</label>
+      <label>Assignee:
         <input
           type="text"
           name="assignee"
           value={updatedTask.assignee}
           onChange={handleChange}
         />
-        <br />
+      </label>
 
-        <label>Priority:</label>
-        <select
-          name="priority"
-          value={updatedTask.priority}
-          onChange={handleChange}
-        >
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
-        <br />
+      <label>Priority:
+      <select
+        name="priority"
+        value={updatedTask.priority}
+        onChange={handleChange}
+      >
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      </label>
+      
 
-        <label>Status:</label>
-        <select
-          name="status"
-          value={updatedTask.status}
-          onChange={handleChange}
-        >
-          <option value="Not Assigned">Not Assigned</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Completed">Completed</option>
-        </select>
-        <br />
+      <label>Status:
+      <select
+        name="status"
+        value={updatedTask.status}
+        onChange={handleChange}
+      >
+        <option value="Not Assigned">Not Assigned</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      </label>
+      
 
-        <button type="submit">Save Changes</button>
-      </form>
-    </div>
+      <button type="submit">Save Changes</button>
+    </form>
   );
 }
